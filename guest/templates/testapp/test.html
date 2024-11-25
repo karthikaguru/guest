@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    {%extends 'testapp/base.html'%}
+<head>
+
+    {%block title%}
+    <title>HOME</title>
+    {%endblock title%}    
+</head>
+<body>
+    {%block content%}
+    <h1>List of Items :</h1>
+    <table border="2" id="table-container" >
+        <thead>
+            <th>Name</th>
+            <th>pw</th>
+        </thead>
+        {%for i in emp%}
+        <tr id="table-row">
+            <td>{{i.username}}</td>
+            <td>{{i.password}}</td>
+            
+            </tr>
+        {%endfor%}
+        <a href="/form"><button>ADD NEW DATA</button></a>
+    </table>
+    {%endblock%}
+   
+
+</body>
+</html>
